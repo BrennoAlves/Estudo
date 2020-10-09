@@ -1,0 +1,14 @@
+Operadores
+
+• Mesmos opedradores aritmeticos do python
+• Prestrar atenção na precedencia
+• Para autoatribuição (n = n + x) == n (operador)= x
+• Autoatribuição x = X + 1 / x += 1 / x ++
+• != (desigual)
+• ===  (identidade restrita (mesmo type))
+• ! (negação) 'Não quero x'
+• && (conjução) 'X e Y'
+• || (disjunção) 'X ou Y'
+• Ordem dos operadores - Aritmetico > Relacionais > Logicos
+• Ordem de logico - Não > e > ou
+• estrutura Ternário - teste ? true : false

@@ -1,0 +1,9 @@
+variavel x = [a,b,c,d,e]
+
+variavel = var/let
+x = array/vector
+
+ìndice/Key
+a = 0 (conteudo/valor)
+b = 1 (conteudo/valor)
+c = 2 (conteudo/valor)

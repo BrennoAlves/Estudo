@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <section>
+        <div>
+            <p> Número: <input type="number" name="numero" id="numero"></p>
+            <p><input type='button' value="Gerar Tabuada" onclick="gerar()"></p>
+
+            </p>
+        </div>
+        <div>
+            <select name="tabuada" id="resultado" size = "10">
+                <option> Digite um número</option>
+            </select>
+            
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Brenno</p>
+        <script>
+            function gerar() {
+                n = document.getElementById('numero')
+                res = document.getElementById('resultado')
+                if (n.value.length == 0) {
+                    window.alert('Valor vazio')
+                }
+                else {
+                    num = Number(n.value)
+                    res.innerText = ''
+                    var multiplicador = 1
+                    while (multiplicador <= 10) {
+                        item = document.createElement('option')
+                        item.text += `${num} X ${multiplicador} = ${num*multiplicador}`
+                        res.appendChild(item)
+                        multiplicador++
+                    }
+
+
+                }
+            }
+        </script>
+</body>
+
+</html>

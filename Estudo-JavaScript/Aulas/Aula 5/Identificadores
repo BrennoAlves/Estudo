@@ -1,0 +1,8 @@
+Identificadores
+
+•	Criar variável: var NOME = xxxxx / let NOME = xxxxxx
+•   typeof serve para identificar o tipo da variavel
+
+•	Não podem começar com números
+•	Não podem conter espaços
+•	Não podem ser palavras reservadas

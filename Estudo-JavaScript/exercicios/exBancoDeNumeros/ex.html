@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analisador de Números</title>
+    <style>
+        body {
+            background: rgb(58, 180, 211);
+            font: normal 15pt Arial;
+        }
+
+        header {
+            color: white;
+            text-align: center;
+        }
+
+        section {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 3px 3px 10px rgb(39, 38, 38);
+        }
+
+        select {
+            width: 30%;
+        }
+
+        footer {
+            color: white;
+            text-align: center;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Analisador de Números</h1>
+    </header>
+    <section>
+        <div>
+            Número (entre 1 e 100): <input type="number" id='numero'>
+            <input type="button" id='bAd' value='Adicionar' onclick='adicionar()'> <br>
+            <p>
+                <b3>Números adicionados</b3>
+            </p>
+        </div>
+        <div>
+            <select id='tabela' size='5'>
+            </select>
+            <p><input type="button" id='bFi' value='Finalizar' onclick='finalizar()'>
+            </p>
+        </div>
+        <div id='resultado'></div>
+    </section>
+    <footer>
+        <p>&copy; Abacaxi</p>
+        <script>
+            total = []
+            function resgatar() {
+                let numero1 = document.getElementById('numero')
+                return Number(numero1.value)
+            }
+
+            function adicionar() {
+                var n = resgatar()
+                let validade = total.indexOf(n)
+                if (n == '') {
+                    window.alert('Campo vazio')
+                }
+                else if (n > 100 || n <= 0) {
+                    window.alert('Número invalido')
+                }
+                else if (validade != -1) {
+                    window.alert('Número repetido')
+                }
+                else {
+                    item = document.createElement('option')
+                    item.text = `Valor ${n} adicionado`
+                    tabela.appendChild(item)
+                    total.push(n)
+                }
+            }
+            function finalizar() {
+                if (total.length < 1) {
+                }
+                else {
+                    total.sort()
+                    var tamanho = total.length
+                    resultado.innerHTML = `Tamanho: ${total.length}<br>Menor: ${total[0]}<br>Maior: ${total[tamanho - 1]}<br>Soma: ${total.reduce((t, n) => n + t, 0)}<br> Média: ${total.reduce((t, n) => n + t, 0) / total.length}`
+                }
+            }
+
+        </script>
+</body>
+
+</html>

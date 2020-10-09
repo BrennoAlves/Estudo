@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual seu horario favorito?</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Qual seu horario favorito ?</h1>
+    </header>
+    <section>
+        <div>
+            <p>Ano de Nascimento:
+                <input type="number" name="txtano" id="txtano">
+            </p>
+            <p class="butao">Sexo:
+                <input type="radio" name="radsex" id="mas">
+                <label for="mas">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+            <p class='butao'>
+                <input class="button" type="button" value="Verificar" onclick="verificar()">
+            </p>
+        </div>
+        <div id="res">
+            Preencha os dados para ver o resultado!
+        </div>
+        <div id="re"></div>
+        <div>
+            <img id="img">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Brenno</p>
+        <script src="script.js"></script>
+</body>
+
+</html>
