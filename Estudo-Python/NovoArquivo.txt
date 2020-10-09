@@ -1,2 +1,0 @@
-Linha gerado com a funcao EscreveArquivo 
-Linha gerado com a funcao AlteraArquivo 
