@@ -1,2 +1,4 @@
 # Estudo
- Códigos antigos e material pessoal de estudo.
+Códigos e material de estudo antigos.
+
+
